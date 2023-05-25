@@ -27,3 +27,8 @@ Steps to construct an Algorithm:
 4. Testing Phase
 5. Implementation
 6. Analysis
+
+
+We encountered an issue with our --- client regarding the retrieval of address-related details. Currently, the client does not provide updated address information if the current address has expired. However, there is one mandatory address that we must retrieve, which complicates the process as it requires scanning all previous day partitions. To address this challenge, we have developed a logic that effectively fetches the required address information.
+
+To further optimize this process, we have converted the logic into a Materialized View (MV) and integrated it with the existing Pre DWL table logic. As a result, we have successfully achieved the desired outcome without impacting the existing logics and framework. This enhancement ensures seamless integration and minimal disruption to our operations.
